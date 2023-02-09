@@ -22,7 +22,7 @@ to do so, run "pip install tweepy" on your command line
 `from collections import Counter`
 
 
-# Sets up the authentication for accessing the Twitter API using the tweepy library-
+## Sets up the authentication for accessing the Twitter API using the tweepy library-
 `consumer_key`, `consumer_secret`, `access_key`, and `access_secret` are string variables that store the credentials required to access the Twitter API. These credentials are specific to your Twitter account and you should use your own values instead of the examples shown in the code.
 
 `auth` is an instance of the `tweepy.OAuthHandler` class that takes the `consumer_key` and `consumer_secret` as arguments and sets them as the authentication credentials.
@@ -33,14 +33,14 @@ The `api` object is then created using the `tweepy.API` class and the `auth` obj
 
 
 
-# Uses the `tweepy` library to retrieve the most recent 100 tweets from the Twitter account with the screen name  and store the data in several lists-
+## Uses the `tweepy` library to retrieve the most recent 100 tweets from the Twitter account with the screen name  and store the data in several lists-
 
 `ID`, `tweets`, `likes`, `time`, `retweet`, and `Source` are lists that will store the tweet information.
 The `tweepy.Cursor` class is used to loop through the tweets and retrieve the required information. The `api.user_timeline` method is used to retrieve the tweets, and the `screen_name` argument is set to "iamchitrang" to specify the Twitter account. The `tweet_mode` argument is set to "extended" to retrieve the full text of tweets that were truncated in the previous API version.
 
 The loop uses the `.items` method to retrieve the most recent 100 tweets and stores the tweet information in the respective lists. The information stored for each tweet includes the tweet ID, tweet text, number of likes, time the tweet was created, number of retweets, and source of the tweet.
 
-# Generates a word cloud from the list of tweets retrieved previously using the tweets list-
+## Generates a word cloud from the list of tweets retrieved previously using the tweets list-
 `from wordcloud import WordCloud, STOPWORDS` imports the `WordCloud` class and the `STOPWORDS` constant from the `wordcloud` library. The `WordCloud` class is used to generate the word cloud, and `STOPWORDS` is a set of common stop words that can be filtered out when generating the word cloud.
 
 `stopwords` is a set that contains the stop words from the `STOPWORDS` constant.
@@ -55,7 +55,7 @@ The `plt.show` method displays the plot.
 
 
 
-# The Vader Sentiment Analysis library to calculate the sentiment score of each tweet in the tweet_list column of the dataframe df-
+## The Vader Sentiment Analysis library to calculate the sentiment score of each tweet in the tweet_list column of the dataframe df-
 
 `from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer` imports the `SentimentIntensityAnalyzer` class from the Vader Sentiment Analysis library.
 
