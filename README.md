@@ -1,8 +1,8 @@
 # Twitter-Sentiment-Analysis
 
 *Note: please install the Tweepy package if you haven't* 
-- to do so, run "pip install tweepy" on your command line
-- 
+to do so, run "pip install tweepy" on your command line
+
 `!pip install tweepy` command installs the tweepy package, which is a Python library for accessing the Twitter API. The "!" symbol is used to run shell commands in a Jupyter notebook or other environments, indicating that the following command should be executed in the terminal.
 
 `!pip install vaderSentiment` command installs the `vaderSentiment` package, which is a Python library for performing sentiment analysis on texts. Like the previous command, the "!" symbol is used to run shell commands in the terminal, and the command installs the `vaderSentiment` package.
@@ -19,7 +19,6 @@
 
 *json_normalize() will allows us to normalize semi-structured JSON data into a flat table*
 `from pandas import json_normalize`
-
 `from collections import Counter`
 
 
@@ -63,6 +62,35 @@ The `plt.show` method displays the plot.
 `sentiment_analyzer_scores` is a function that takes as an argument a text and returns the sentiment score of the text using the `SentimentIntensityAnalyzer` class. The function creates an instance of the `SentimentIntensityAnalyzer` class and uses the `polarity_scores` method to get the sentiment score of the text. The sentiment score is a dictionary that contains several sentiment scores such as positive, negative, neutral, and compound scores. The compound score is a normalized, weighted composite score of the sentiment scores, and it ranges from -1 to 1.
 
 `df['score'] = df['tweet_list'].apply(lambda x: sentiment_analyzer_scores(x))` creates a new column `'score'` in the dataframe `df` and populates it with the sentiment scores of the tweets. The apply method is used to apply the `sentiment_analyzer_scores` function to each element of the `'tweet_list'` column, and the resulting scores are stored in the `'score'` column. The lambda function is used to pass each tweet in the `'tweet_list'` column as an argument to the `sentiment_analyzer_scores` function.
+
+## Seaborn library to create a bar plot that displays the count of sentiment scores for each sentiment category-
+
+`import seaborn as sns` imports the Seaborn library and renames it to `sns`.
+
+`plt.figure(figsize=(10, 8))` creates a figure with the specified width and height.
+
+`sns.set(style="darkgrid")` sets the Seaborn style to "darkgrid".
+
+`sns.countplot(x=df['Sentiment'], order=['positive', 'neutral', 'negative']).set_title('Musk Sentiment', fontsize=28)` creates a bar plot of the count of sentiment scores for each sentiment category. The `x` parameter specifies the data column to be plotted, which is the `'Sentiment'` column in this case. The `order` parameter is used to specify the order of the bars in the plot, which is set to `['positive', 'neutral', 'negative']`. The `set_title` method is used to set the title of the plot, which is set to "Musk Sentiment" with a font size of 28.
+
+
+## Using the Seaborn and scikit-learn libraries to create a histogram of the "likes" data-
+
+`from sklearn.datasets import load_diabetes` imports the `load_diabetes` method from the scikit-learn library.
+
+`sns.set()` sets the Seaborn style.
+
+`data = load_diabetes()` loads the diabetes dataset from the scikit-learn library.
+
+`X, y_ = data.data, likes` separates the data and target variables into `X` and `y_` respectively.
+
+`SR_y = pd.Series(y_, name="Likes")` creates a pandas series of the target variable and names it "Likes".
+
+`fig, ax = plt.subplots()` creates a subplot.
+
+`sns.distplot(SR_y, bins=25, color="g", ax=ax)` creates a histogram of the "Likes" data with 25 bins, a green color, and displays it on the subplot defined in step 6.
+
+`plt.show()` displays the plot.
 
 
 
