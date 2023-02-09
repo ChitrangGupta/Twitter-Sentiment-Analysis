@@ -1,25 +1,26 @@
 # Twitter-Sentiment-Analysis
-# load packages
-# Note: please install the Tweepy package if you haven't
-# to do so, run "pip install tweepy" on your command line
+
+*Note: please install the Tweepy package if you haven't* 
+- to do so, run "pip install tweepy" on your command line
+- 
 `!pip install tweepy` command installs the tweepy package, which is a Python library for accessing the Twitter API. The "!" symbol is used to run shell commands in a Jupyter notebook or other environments, indicating that the following command should be executed in the terminal.
 
 `!pip install vaderSentiment` command installs the `vaderSentiment` package, which is a Python library for performing sentiment analysis on texts. Like the previous command, the "!" symbol is used to run shell commands in the terminal, and the command installs the `vaderSentiment` package.
 
 
-# Tweepy allows us to access the twitter API in python
-import tweepy  
+*Tweepy allows us to access the twitter API in python*
+`import tweepy`
 
-# Pandas will allow us to extract tweets/users and load the data into dataframe 
-import pandas as pd
+*Pandas will allow us to extract tweets/users and load the data into dataframe*
+`import pandas as pd`
 
-# JSON will allow us to work with JSON files
-import json
+*JSON will allow us to work with JSON files*
+`import json`
 
-# json_normalize() will allows us to normalize semi-structured JSON data into a flat table
-from pandas import json_normalize
+*json_normalize() will allows us to normalize semi-structured JSON data into a flat table*
+`from pandas import json_normalize`
 
-from collections import Counter
+`from collections import Counter`
 
 
 # Sets up the authentication for accessing the Twitter API using the tweepy library-
