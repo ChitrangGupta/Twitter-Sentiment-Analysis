@@ -16,7 +16,7 @@
 *JSON will allow us to work with JSON files*
 `import json`
 
-*json_normalize() will allows us to normalize semi-structured JSON data into a flat table*
+*Json_normalize() will allows us to normalize semi-structured JSON data into a flat table*
 `from pandas import json_normalize`
 `from collections import Counter`
 
@@ -24,7 +24,7 @@
 ## Sets up the authentication for accessing the Twitter API using the tweepy library-
 `consumer_key`, `consumer_secret`, `access_key`, and `access_secret` are string variables that store the credentials required to access the Twitter API. These credentials are specific to your Twitter account and you should use your own values instead of the examples shown in the code.
 
-`auth` is an instance of the `tweepy.OAuthHandler` class that takes the `consumer_key` and `consumer_secret` as arguments and sets them as the authentication credentials.
+The `auth` is an instance of the `tweepy.OAuthHandler` class that takes the `consumer_key` and `consumer_secret` as arguments and sets them as the authentication credentials.
 
 The `set_access_token` method is then called on the `auth` object and takes the `access_key` and `access_secret` as arguments to set the access token for the API.
 
