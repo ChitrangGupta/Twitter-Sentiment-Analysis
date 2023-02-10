@@ -1,6 +1,6 @@
 # Twitter-Sentiment-Analysis
 
-*Note: please install the Tweepy package if you haven't*, to do so, run "pip install tweepy" on your command line
+*Note: To install the Tweepy package, run "pip install tweepy" on your command line
 
 `!pip install tweepy` command installs the tweepy package, which is a Python library for accessing the Twitter API. The "!" symbol is used to run shell commands in a Jupyter notebook or other environments, indicating that the following command should be executed in the terminal.
 
